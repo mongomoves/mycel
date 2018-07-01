@@ -10,14 +10,14 @@ void run_file(filesystem::path &file, std::string &app)
 	{
 		if (((int) ShellExecuteA(NULL, "open", file.string().c_str(), NULL, NULL, SW_NORMAL)) <= 32)
 		{
-			printf("Fel: (%d) \n", GetLastError());
+			printf("Error: (%d) \n", GetLastError());
 		}
 	}
 	else
 	{
 		if ((int)ShellExecuteA(NULL, "open", app.c_str(), file.string().c_str(), NULL, SW_NORMAL) <= 32)
 		{
-			printf("Fel: (%d) \n", GetLastError());
+			printf("Error: (%d) \n", GetLastError());
 		}
 	}
 }

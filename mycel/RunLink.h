@@ -3,6 +3,7 @@
 #define RUN_LINK_H
 
 #include "Link.h"
+#include "UStrConverter.h"
 #include <vector>
 #include <string>
 #include <filesystem>

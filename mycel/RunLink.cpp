@@ -8,14 +8,15 @@ void run_file(filesystem::path &file, std::string &app)
 {
 	if (app == "default")
 	{
-		if (((int) ShellExecuteA(NULL, "open", file.string().c_str(), NULL, NULL, SW_NORMAL)) <= 32)
+		//if (((int) ShellExecuteW(NULL, "open", file.string().c_str(), NULL, NULL, SW_NORMAL)) <= 32)
+		if (((int)ShellExecuteW(NULL, L"open", widen_str(file.string()).c_str(), NULL, NULL, SW_NORMAL)) <= 32)
 		{
 			printf("Error: (%d) \n", GetLastError());
 		}
 	}
 	else
 	{
-		if ((int)ShellExecuteA(NULL, "open", app.c_str(), file.string().c_str(), NULL, SW_NORMAL) <= 32)
+		if ((int)ShellExecuteW(NULL, L"open", widen_str(app).c_str(), widen_str(file.string()).c_str(), NULL, SW_NORMAL) <= 32)
 		{
 			printf("Error: (%d) \n", GetLastError());
 		}

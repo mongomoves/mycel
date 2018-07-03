@@ -8,7 +8,6 @@ void run_file(filesystem::path &file, std::string &app)
 {
 	if (app == "default")
 	{
-		//if (((int) ShellExecuteW(NULL, "open", file.string().c_str(), NULL, NULL, SW_NORMAL)) <= 32)
 		if (((int)ShellExecuteW(NULL, L"open", widen_str(file.string()).c_str(), NULL, NULL, SW_NORMAL)) <= 32)
 		{
 			printf("Error: (%d) \n", GetLastError());

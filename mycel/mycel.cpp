@@ -2,17 +2,7 @@
 //
 
 #include "stdafx.h"
-#include "iniRW.h"
-#include "Link.h"
-#include "RunLink.h"
-#include <iostream>
-#include <string>
-#include <vector>
-#include <filesystem>
-#include <fstream>
-#include <KnownFolders.h>
-#include <shlobj.h>
-#include <windows.h>
+#include "mycel.h"
 
 using std::string;
 namespace filesystem = std::experimental::filesystem;

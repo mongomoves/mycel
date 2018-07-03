@@ -1,6 +1,7 @@
 #pragma once
 #ifndef H_USTRCONV
 #define H_USTRCONV
+
 #include <string>
 #include <Windows.h>
 
